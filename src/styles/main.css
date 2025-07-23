@@ -1,0 +1,194 @@
+* {
+    /* Reseta estilos padrão do navegador */
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-decoration: none;
+    box-sizing: border-box; /* Inclui padding e border no cálculo de largura e altura */
+}
+
+:root {
+    /* Variáveis CSS para cores e fontes */
+    --cor-primaria: rgba(201, 243, 29, 1);
+    /* Cor do Figma */
+    --cor-secundaria:  rgba(0, 0, 0, 1);
+    --cor-fundo: rgba(32, 31, 31, 1);
+    /* Cor de fundo do site */
+    --cor-fundo-claro: rgb(85, 85, 85);
+    --cor-white: #ffffff;
+    --fonte-principal: "Roboto", sans-serif;
+    /* Fonte principal do site */
+    --spacing-md: 16px; 
+    /* Espaçamento médio */
+    --padding-section-vertical: 100px; /* Espaçamento vertical das seções */
+}
+
+/* Estilos globais */
+body {
+    font-family: var(--fonte-principal); 
+    line-height: 1.6; /* Espaçamento entre linhas */
+}
+
+.welcome-section {
+    background-image: url("../../public/assets/imagens/fundo.jpg");
+    background-size: cover;
+    /* Cobre todo o elemento */
+    background-position: center;
+    /* Centraliza a imagem de fundo */
+    background-repeat: no-repeat;
+    /* Evita repetição da imagem */
+    min-height: 600px; /* Altura mínima da seção */
+    text-align: center;
+    /* Centraliza o texto horizontalmente dentro da seção */
+    padding: var(--padding-section-vertical) 20px;
+    /* Espaçamento interno vertical e horizontal */
+}
+
+.welcome-section h1 {
+    font-family: var(--fonte-principal);
+    color: var(--cor-primaria);
+    font-size: 54px;
+    font-weight: 600; /* Peso da fonte (SemiBold) */
+    line-height: 1.2;  /* Espaçamento entre linhas do título */
+    max-width: 90%; /* Largura máxima do título */
+    margin-top: 50px;
+    margin-bottom: 70px; /* Espaçamento ABAIXO do título */
+    margin-left: 70px; /* Espaçamento à esquerda do título */
+}
+
+.welcome-section p {
+    font-family: var(--fonte-principal);
+    color: var(--cor-white);
+    font-size: 25px;
+    line-height: 40px; /* Espaçamento entre linhas dos parágrafos */
+    max-width: 900px;  /* Largura máxima para os parágrafos */
+    margin: 0 auto;
+    font-weight: 400; /* Peso da fonte (SemiBold) */
+}
+
+pre { 
+    font-family: var(--fonte-principal);
+    color: var(--cor-white);
+    font-size: 25px;
+     font-weight: normal; /* Peso da fonte (Regular) */
+    line-height: 40px; /* Espaçamento entre linhas dos parágrafos */
+    max-width: 900px;  /* Largura máxima para os parágrafos */
+   margin: 0 auto;/* Centraliza horizontalmente e adiciona margem inferior */
+}
+
+.welcome-section p:last-of-type {
+    margin-bottom: 0;
+    /* Remove a margem inferior do último parágrafo */
+    }
+
+    .community-cards-section {
+    background-color: var(--cor-fundo); /* Cor de fundo da seção dos cards */
+    padding: 60px 20px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o título "Agora é IMPORTANTE que você:" */
+}
+
+.community-cards-section h2 {
+    color: var(--cor-white);
+    font-size: 28px;
+    margin-bottom: 40px;
+}
+
+span {
+    color: var(--cor-primaria);
+}
+
+.cards-container {
+display: flex;
+flex-wrap: wrap; /* Permite que os cards se ajustem em várias linhas */
+justify-content: center;
+gap: 20px;
+max-width: 1200px; /* Largura máxima do container dos cards */
+margin: 0 auto;
+}
+
+.card {
+    background-color: var(--cor-primaria);
+    padding: 30px; 
+    border-radius: 10px;
+    text-align: center;
+    width: 380px; 
+    flex-shrink: 0; /* Impede que os cards encolham */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-between; /* Espaça os itens dentro do card */
+    min-height: 300px;
+}
+
+.card-icon {
+    width: 102px;
+    height: 102px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    color: var(--cor-secundaria);
+    font-size: 23px;
+    margin-bottom: 10px; /* Espaçamento abaixo do título do card */
+}
+
+.card p {
+    color: var(--cor-secundaria);
+    font-size: 16px; 
+    line-height: 1.5; /* Espaçamento entre linhas do texto do card */
+    margin-bottom: 20px; /* Espaçamento abaixo do texto do card */
+}
+
+.btn-primary {
+    display: inline-block; /* Permite definir largura e altura */
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+    padding: 22px 25px;  
+    border-radius: 10px;
+    width: 240px;
+    height: 70px; 
+    font-weight: 700; /* Peso da fonte (Bold) */
+    transition: background-color 0.3s ease; /* Transição suave para a cor de fundo */
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-fundo-claro); /* Cor de fundo ao passar o mouse */
+}
+
+a {
+    width:184px;
+    height: 25px;
+    font-size: 15px; 
+    font-weight: 400; /* Peso da fonte (SemiBold) */
+} 
+
+.whatsapp-section {
+    background-color: var(--cor-primaria);
+    padding: var(--padding-section-vertical);
+    text-align: center;
+    display: flex; /* Exibe os itens em linha */
+    flex-direction: column; /* Alinha os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+.whatsapp-section h2 {
+    color: var(--cor-secundaria);
+    font-size: 45px; /* Tamanho do título */
+    margin-bottom: 20px; /* Espaçamento abaixo do título */
+    font-weight: 700; /* Peso da fonte (Bold) */
+}
+
+footer {
+    background-color: var(--cor-fundo);
+    color: var(--cor-white);
+    padding: 20px;
+    text-align: center;
+    font-size: 12px; /* Tamanho da fonte do rodapé */
+    font-weight: 400; /* Peso da fonte (Regular) */
+}
+
+
+
+
+
